@@ -61,7 +61,7 @@ public class DetailActivity extends AppCompatActivity {
         ingredients = findViewById(R.id.ingredients_tv);
 
         populateUI();
-        Picasso.with(this)
+        Picasso.get()
                 .load(sandwich.getImage())
                 //as it takes Picasso some time load image, decided to add placeholder
                 .placeholder(R.drawable.ic_image_white_24dp)
@@ -75,7 +75,7 @@ public class DetailActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onError() {
+                    public void onError(Exception e) {
                     }
                 });
 
