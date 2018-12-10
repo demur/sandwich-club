@@ -3,7 +3,6 @@ package com.udacity.sandwichclub.model;
 import java.util.List;
 
 public class Sandwich {
-
     private String mainName;
     private List<String> alsoKnownAs = null;
     private String placeOfOrigin;

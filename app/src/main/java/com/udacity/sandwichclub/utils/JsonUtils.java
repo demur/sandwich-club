@@ -29,11 +29,11 @@ public class JsonUtils {
                 return null;
             }
             JSONObject nameNode = jsonObject.getJSONObject(SJ_NAME_NODE);
-            String name = nameNode.getString(SJ_NAME);
+            String name = nameNode.optString(SJ_NAME);
             List<String> alias = getStringArray(nameNode.getJSONArray(SJ_ALIAS));
-            String origin = jsonObject.getString(SJ_ORIGIN);
-            String description = jsonObject.getString(SJ_DESCRIPTION);
-            String image = jsonObject.getString(SJ_IMAGE);
+            String origin = jsonObject.optString(SJ_ORIGIN);
+            String description = jsonObject.optString(SJ_DESCRIPTION);
+            String image = jsonObject.optString(SJ_IMAGE);
             List<String> ingredients = getStringArray(jsonObject.getJSONArray(SJ_INGREDIENTS));
             return new Sandwich(name, alias, origin, description, image, ingredients);
         } catch (JSONException e) {

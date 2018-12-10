@@ -8,4 +8,61 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Detail Labels -->
+    <style name="DetailLabel">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">@dimen/detail_labels_layout_width</item>
+        <item name="android:layout_height">@dimen/detail_labels_layout_height</item>
+        <item name="android:layout_marginTop">@dimen/detail_labels_spacing</item>
+        <item name="layout_constraintStart_toStartOf">@id/tv_alias_label</item>
+    </style>
+
+    <style name="AliasLabel" parent="DetailLabel">
+        <item name="android:layout_marginTop">@dimen/detail_alias_label_margin_top</item>
+    </style>
+
+    <style name="OriginLabel" parent="DetailLabel" />
+
+    <style name="DescriptionLabel" parent="DetailLabel" />
+
+    <style name="IngredientsLabel" parent="DetailLabel" />
+
+    <!-- Detail Fields -->
+    <style name="DetailDataFieldBase" /><!--To be able to inject v26 style without duplicating rest of the properties-->
+
+    <style name="DetailDataField" parent="DetailDataFieldBase">
+        <item name="android:layout_width">@dimen/detail_fields_layout_width</item>
+        <item name="android:layout_height">@dimen/detail_fields_layout_height</item>
+        <item name="layout_constraintStart_toStartOf">@id/tv_also_known</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <style name="AliasField" parent="DetailDataField">
+        <item name="android:layout_marginStart">@dimen/detail_alias_field_margin_start</item>
+    </style>
+
+    <style name="OriginField" parent="DetailDataField" />
+
+    <style name="DescriptionField" parent="DetailDataField" />
+
+    <style name="IngredientsField" parent="DetailDataField" />
+
+    <!-- Detail Cover Image-->
+    <style name="DetailImageBase" /><!--To be able to inject v21 style without duplicating rest of the properties-->
+
+    <style name="DetailImage" parent="DetailImageBase">
+        <item name="android:layout_width">@dimen/detail_iv_layout_width</item>
+        <item name="android:layout_height">@dimen/detail_iv_layout_height</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:background">@android:color/background_dark</item>
+    </style>
+
+    <!-- Detail Barrier -->
+    <style name="DetailBarrier">
+        <item name="android:layout_width">@dimen/detail_barrier_layout_width</item>
+        <item name="android:layout_height">@dimen/detail_barrier_layout_height</item>
+        <item name="barrierDirection">end</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
 </resources>

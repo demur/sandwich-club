@@ -8,7 +8,7 @@
     <string name="detail_ingredients_label">Ingredients:</string>
 
     <!-- Content descriptions-->
-    <string name="sandwich_picture_content_description">Sandwich picture</string>
+    <string name="content_description_picture">%s picture</string>
 
     <!-- Error messages-->
     <string name="detail_error_message">Sandwich data not available</string>
