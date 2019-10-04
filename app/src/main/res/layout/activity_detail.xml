@@ -19,12 +19,12 @@
             android:layout_height="match_parent"
             android:fadeScrollbars="false">
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/detail_cl_padding">
 
-                <android.support.constraint.Barrier
+                <androidx.constraintlayout.widget.Barrier
                     android:id="@+id/barrier"
                     style="@style/DetailBarrier"
                     app:constraint_referenced_ids="tv_alias_label, tv_origin_label, tv_description_label, tv_ingredients_label" />
@@ -79,7 +79,7 @@
                     app:layout_constraintTop_toTopOf="@id/tv_ingredients_label"
                     tools:text="Ingredients" />
 
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
     </LinearLayout>
 </layout>
